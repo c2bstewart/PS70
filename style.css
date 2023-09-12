@@ -16,12 +16,13 @@ p {font-size: 16px;}
 nav {
   background-color: #5A189A;
   color: white;
+  padding: 50px 0px;
 }
 
 .navbar-nav {
   display: flex;
   justify-content: flex-start;
-  gap: 50px;
+  gap: 30px;
 }
 
 .nav-title{
@@ -30,10 +31,10 @@ nav {
 }
 
 .nav-link {
-  border: 3px outset #7B2CBF;
+  border: 3px outset #10002B;
   border-radius: 40px;
   padding: 10px 30px;
-  background-color: #7B2CBF;
+  background-color: #10002B;
   color: white;
   transition: 0.3s;
 }
