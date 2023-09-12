@@ -53,6 +53,10 @@ nav {
   margin: auto auto;
 }
 
+.col-sm-4 {
+  
+}
+
 .flexrow{
   display: flex;
   justify-content: space-evenly;
