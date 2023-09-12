@@ -18,6 +18,12 @@ nav {
   color: white;
 }
 
+.navbar-nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+}
+
 .nav-title{
   margin-left: 15px;
   margin-right: 15px;
@@ -25,9 +31,8 @@ nav {
 
 .nav-link {
   border: 3px outset #7B2CBF;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 10px;
+  border-radius: 40px;
+  padding: 10px 30px;
   background-color: #7B2CBF;
   color: white;
   transition: 0.3s;
@@ -35,9 +40,8 @@ nav {
 
 .nav-link:hover {
   border: 3px inset #E0AAFF;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 10px;
+  border-radius: 40px;
+  padding: 10px 30px;
   background-color: #E0AAFF;
   color: black;
   transition: 0.3s;
