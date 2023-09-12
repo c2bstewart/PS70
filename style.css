@@ -49,16 +49,21 @@ nav {
   transition: 0.3s;
 }
 
-.row{
+.row {
   margin: auto auto;
 }
 
-.flexrow{
+.flexrow {
   display: flex;
   justify-content: space-evenly;
 }
 
-.caption{
+.center-row {
+  display: flex;
+  justify-content: center;
+}
+
+.caption {
   color: gray;
   font-size: 14px;
   text-align: center;
