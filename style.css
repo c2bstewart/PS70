@@ -1,7 +1,8 @@
 body {
     font: 20px "Gill Sans", Verdana, sans-serif;
     line-height: 1.8;
-    color: black;
+    color: #EEE7E8;
+    background-color: #130F1D;
     padding-top: 0px !important;
   }
 
@@ -14,8 +15,8 @@ p {font-size: 16px;}
 }
 
 nav {
-  background-color: #7B2CBF;
-  color: #E0AAFF;
+  background-color: #130F1D;
+  color: #EEE7E8;
   padding: 50px 0px;
 }
 
@@ -28,24 +29,23 @@ nav {
 .nav-title{
   margin-left: 15px;
   margin-right: 15px;
-  color: #E0AAFF;
+  color: #EEE7E8;
 }
 
 .nav-link {
-  border: 3px outset #240046;
+  border: 3px outset #0E078D;
   border-radius: 40px;
   padding: 10px 30px;
-  background-color: #240046;
-  color: white;
+  background-color: #0E078D;
+  color: #EEE7E8;
   transition: 0.3s;
 }
 
 .nav-link:hover {
-  border: 3px inset #E0AAFF;
+  border: 3px inset #E3165B;
   border-radius: 40px;
   padding: 10px 30px;
-  background-color: #E0AAFF;
-  color: black;
+  background-color: #0E078D;
   transition: 0.3s;
 }
 
