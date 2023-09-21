@@ -39,6 +39,7 @@ hexagons how I wanted, so I drafted up three pieces in Fusion: the main hexagona
 tiles, a smaller triangular piece I thought could be used for the base, and a
 tiny E-shaped connector that could be used to stack tiles parallel to each other.
 
+
 <div class="flexrow">
   <img src="./tilemath2.jpeg" alt="geometric diagrams drawn in chalk on a blackboard">
 </div>
@@ -53,6 +54,7 @@ also used two tile types, but eventually I decided to opt for the tried-and-true
 method of doing a simpler thing better rather than doing a more complex thing
 worse, so I cut it down to a single circular tile design.
 
+
 <div class="flexrow">
   <img src="./tiles1_scale.jpeg" alt="several small cardboard tiles on a laptop computer">
 </div>
@@ -66,6 +68,7 @@ kind of symmetry would work best, so I made two versions: one with 4 edge
 notches and two center notches (to allow for center connections of either
 orientation), and the other with 3 edge notches and a single center notch offset
 from the actual center of the circle.
+
 
 <div class="flexrow">
   <img src="./tiles2_sketch.png" alt="screenshot of Fusion 360 with sketches of two circular tiles.">
@@ -84,6 +87,7 @@ but now I made them 5mm longer, and I upped the material thickness from 4mm to
 new center notch size was much better, but that the connections were now too
 loose, so I cut the material thickness back down to 4.5mm.
 
+
 <div class="flexrow">
   <img src="./tiles2_3.jpeg" alt="3 kinds of circular cardboard tiles on a table.">
   <img src="./tiles_cutting.gif" alt="a laser cutter cutting an array of circular tiles out of cardboard." width="50%">
@@ -95,6 +99,7 @@ together! I was able to create a few interesting-looking sculptures, and I found
 that the pliability of the cardboard meant I could fudge the geometry just
 enough to make an interesting kind of low stand that could be used as a rest
 for a spherical or other oddly-shaped object.
+
 
 <div class="flexrow">
   <img src="./sculptures1.jpeg" alt="two cardboard sculptures that look kind of like people.">
@@ -112,6 +117,8 @@ center notch arrangements to see if I could get a design with more options for
 center connections, and I would experiment with printing these tiles in various
 sizes for increased design flexibility.
 
+
+
 <br>
 <h4>Assignment 2: Fusion 360 Tutorial</h4>
 
@@ -124,6 +131,9 @@ I did learn some new tricks, though, including the fillet tool and the shell
 tool. The tutorial also advised viewers to organize models within a file into
 components, which seemed like a good idea to me.
 
+<a href="https://youtu.be/6yPKMSb6ja8">Watch the tutorial yourself here!</a>
+
+<br>
 One fun thing I didn't learn from the tutorial (but afterwards looked up
 separately online, because I was curious) was how to change the appearance of
 solid bodies by applying a material to them and then editing the color of that
@@ -140,8 +150,82 @@ that skill to make my Lego block a nice red color :)
 </div>
 <p class="caption">Top: the Lego block before its makeover. Bottom: a screenshot of me changing the block to be red.</p>
 
+
+
 <br>
 <h4>Assignment 3: Fusion Modeling</h4>
+
+
+<div class="flexrow">
+  <img src="./assembly.png" alt="a CAD model of a flash drive sitting on top of five CAD-modeled metal nuts.">
+</div>
+<p class="caption">My final assembly: a tableau of my flash drive and several copies of the metal nut I modeled.</p>
+
+The first item I chose to model was my trusty flashdrive. I figured this would
+be a good choice, because it was a combination of things I was pretty sure I
+knew how to do (the rectangular body of the drive) plus some stuff I knew I'd
+have to figure out (the circular hook on the end of the drive).
+
+
+<div class="flexrow">
+  <img src="./drive_params.png" alt="a dialog box showing the parameter dimensions of the flash drive.">
+</div>
+<p class="caption">The parameters for my flash drive. I knew the round hook was going to be tricky.</p>
+
+
+I started with a basic rectangular prism, then used the fillet tool on the
+edges to round them off. I thought up a few possible strategies for the hook on
+the end, but I ended up extruding out a rectangular prism, cutting a hole in it
+by extruding a circle, and then using fillet on the edges of the circle to make
+the interior rounded edge.
+
+
+<br>
+Finally, for the seams in the body, I figured out how to use the split body tool
+to create an edge at the correct distances, then used fillet just the tiniest
+bit to create the small divot where the plastic parts fit together. For the
+finishing touches, I added materials and color matched the model to my real
+flash drive. It ended up looking pretty similar!
+
+
+<div class="flexrow">
+  <img src="./flashdrive_nocolor.png" alt="a gray 3D model of a standard flash drive.">
+  <img src="./flashdrive.jpeg" alt="the same flash drive, now colored white and blue, with the original drive held in front for comparison.">
+</div>
+<p class="caption">The completed model pre-coloring, plus a photo of it the original flash drive in front of the colored model.</p>
+
+
+<br>
+For my second model subject, I picked a large metal nut I found in the lab
+hardware supply. At first, I thought this would be easy: all I had to do was
+make a hexagon, extrude it, cut a hole in the middle with a cylinder, and add
+threads with the built-in thread tool.
+
+
+<div class="flexrow">
+  <img src="./nut_params.png" alt="a dialog box showing the parameter dimensions of a metal nut.">
+</div>
+<p class="caption">The parameters I measured for my nut. How hard can it be, right?</p>
+
+
+
+<br>
+However, I soon realized the bevel on edges of the nut was going to cause
+problems. After much trial and error (and looking up some
+<a href="https://youtu.be/c5UR_zdANJ4?t=110">tutorials</a> on the Internet), I
+learned how to use the extrude tool with a taper angle to get the result I
+wanted. The threads also caused me some problems, because Fusion automatically
+corrects the hole size to a standard measurement but I couldn't find one that
+matched the size I had measured on my nut. Eventually, I just went with the
+standard option that was closest in size to what I was looking for.
+
+
+<div class="flexrow">
+  <img src="./nut.png" alt="a gray 3D model of a metal nut.">
+  <img src="./nut_w_nut.jpeg" alt="the same nut, with a physical nut held up in front of it.">
+</div>
+<p class="caption">The completed nut model, plus a photo of it with the original nut held up in front for comparison.</p>
+
 
 </div>
 </xmp>
