@@ -13,6 +13,10 @@ body {
 p {font-size: 16px;}
 .margin {margin-bottom: 15px;}
 
+a {
+  color: #E3165B;
+}
+
 .container-fluid {
   padding: 0px;
   /*padding-bottom: 70px;*/
