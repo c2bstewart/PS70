@@ -66,24 +66,36 @@ Now I could add in the Arduino part. I hooked up a simple circuit with my Arduin
 Uno, my motor, a motor controller, and a few wires, and wrote a simple program to
 supply power to the motor:
 
+<pre><code>
+  const int A1A = 3;  // define pin 3 for A-1A 
+  const int A1B = 5;  // define pin 4 for A-1B 
 
-```cpp
-const int A1A = 3;  // define pin 3 for A-1A 
-const int A1B = 5;  // define pin 4 for A-1B 
+  void setup() {
+    pinMode(A1A, OUTPUT);     // specify these pins as outputs
+    pinMode(A1B, OUTPUT);
+    digitalWrite(A1A, LOW);   // start with the motors off 
+    digitalWrite(A1B, LOW);
+  }
 
-void setup() {
-  pinMode(A1A, OUTPUT);     // specify these pins as outputs
-  pinMode(A1B, OUTPUT);
-  digitalWrite(A1A, LOW);   // start with the motors off 
-  digitalWrite(A1B, LOW);
-}
+  void loop() {
+    // start the motor 
+    digitalWrite(A1A, HIGH);   
+    digitalWrite(A1B, LOW);
+  }
+</code></pre>
 
-void loop() {
-  // start the motor 
-  digitalWrite(A1A, HIGH);   
-  digitalWrite(A1B, LOW);
-}
-```
+I figured out that I had to reverse the direction of the motor to make the panther's
+running motion go the right way, so I flipped pin A1-B to do that and then also
+added some delay functions to create a pattern of motion. Here's a video of the
+final result:
+
+<p class="margin">   </p>
+<div class="flexrow">
+  <video controls>
+    <source src="./panther-vid.mov" type="video/mov">
+  </video>
+  </div>
+<p class="caption">The final result (so far).</p>
 
 </div>
 </xmp>
