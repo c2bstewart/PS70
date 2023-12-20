@@ -71,6 +71,7 @@ other features that the keypad would ideally include:
       keypad or what macro was just triggered.</li>
 </ol>
 
+<p class="margin"></p>
 During this phase, I made several sketches and diagrams by myself and while talking
 to Ibrahim and the other lab TFs to try to pin down how I wanted my project to end up.
 
@@ -122,6 +123,7 @@ ItsyBitsy M4 Express that I found in the lab, which worked wonderfully.
 </div>
 <p class="caption">I set up a test circuit with just the ItsyBitsy and a single button to make sure my wiring logic was correct.</p>
 
+<p class="margin"></p>
 I also wanted to switch to a different kind of button. My MVP used the small brown
 breadboard buttons that we had in the lab, but I wanted to use the larger black
 buttons because they looked more polished and had a nicer click action. However,
@@ -138,6 +140,7 @@ down, they connected and disconnected the circuit each time they were pressed.
 </div>
 <p class="caption">For testing the buttons, I wrote a version of my code with just a single macro button assigned to the 'Undo' command, then connected the Arduino pin to each button in turn to test the solder joints.</p>
 
+<p class="margin"></p>
 I noticed that on every other press the black buttons had a tendency to trigger
 twice; this behavior is visible in the gif above. PK helped me open up one of the buttons to take
 a look at the mechanism, where we found that the reason for this was because each press
@@ -264,6 +267,7 @@ solder everything down as well as I did!
 </div>
 <p class="caption">It took me several hours to carefully solder all the wires into place. I was worried I would break them by bending them too much.</p>
 
+<p class="margin"></p>
 I used a soldering iron to embed the screw inserts into the printed base (by heating
 up the metal inserts to soften the plastic around them, then pushing them into place).
 The divots in the base had been designed pretty close to the dimensions of the inserts,
@@ -284,6 +288,26 @@ for my project was complete!
 </div>
 <p class="caption">The finished keypad.</p>
 
+<p class="margin"></p>
+The code ended up being a little simpler than I had anticipated -- or maybe that
+was just because I'd figured out a lot of it early on. I used the class functionality
+from my MVP to store the eight buttons to reduce code duplication when checking
+whether a button had been pressed, and also so that each one could have its own
+read pin and cooldown timer variable. Because these are toggle buttons, each one also needed
+its own state variable to keep track of whether the circuit was open or closed,
+because you check whether a toggle button has been pressed by seeing whether its
+state is different from what it was just a moment ago.
+
+<p class="margin"></p>
+I wanted to save the macro sequences also within the class, as a kind of dynamically
+variable function, but that kind of functionality doesn't work well in C++. Instead,
+I wrote macro functions at the bottom of my code and had each button call the
+appropriate function when pressed. To implement the two layers of macros, I just
+added a check at the top of the loop code for whether the profile slider switch
+was on or off. Lastly, I included the code for my safety button right at the top
+of the loop code, so that if a bug ever caused me to lose control of my keyboard,
+I could hit the safety button to delay the code for 10 seconds (which should be
+long enough to upload new code from my computer).
 
 </div>
 </xmp>
